@@ -43,10 +43,10 @@ public class ParseAndGeneratePdfService {
         String h1 = "";
         String p = "";
 
-        if (doc.select("h1").get(0).hasText()) {
+        if (doc.select("h1").get(0) != null) {
             h1 = doc.select("h1").get(0).text();
         }
-        if (doc.select("h1").get(0).hasText()) {
+        if (doc.select("h1").get(0) != null) {
             p = doc.select("p").get(0).text();
         }
 
