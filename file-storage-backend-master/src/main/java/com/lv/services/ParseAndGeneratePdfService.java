@@ -40,15 +40,8 @@ public class ParseAndGeneratePdfService {
         org.jsoup.nodes.Document doc = Jsoup.connect(url).get();
 
         String title = doc.title();
-        String h1 = "";
-        String p = "";
-
-        if (doc.select("h1").get(0) != null) {
-            h1 = doc.select("h1").get(0).text();
-        }
-        if (doc.select("h1").get(0) != null) {
-            p = doc.select("p").get(0).text();
-        }
+        String h1 = doc.select("h1").get(0).text();
+        String p = doc.select("p").get(0).text();
 
         return new ParseHtmlDto(title, h1, p);
     }
