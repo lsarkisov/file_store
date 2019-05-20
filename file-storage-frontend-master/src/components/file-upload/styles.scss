@@ -1,0 +1,73 @@
+.dropzone {
+  height: 100px;
+  margin: 10px 0;
+  position: relative;
+  
+  &-area {
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 14px;
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.files-list {
+  position: relative;
+
+  .list-group-item {
+    padding-right: 60px;
+
+    input {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .img {
+    img {
+      display: inline-block;
+      width: 100px;
+      height: auto;
+    }
+  }
+
+  &--controlls {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+
+    span {
+      margin-left: 10px;
+      cursor: pointer;
+    }
+  }
+
+  .warning {
+    color: red;
+    font-size: 14px;
+  }
+}
+
+.spinner {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  text-align: center;
+  animation: spinner 1s infinite linear;
+}
+
+@keyframes spinner {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg);}
+} 

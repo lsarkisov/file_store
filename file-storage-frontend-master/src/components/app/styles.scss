@@ -1,0 +1,38 @@
+.header {
+  background-color: $gray-dark;
+  height: 90px;
+
+  .title {
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+.nav {
+  ul {
+    padding: 0;
+    margin: 10px;
+
+    li {
+      display: inline-block;
+      margin: 10px;
+    }
+
+    a {
+      color: black;
+      cursor: pointer;
+
+      &:hover {
+        color: gray;
+      }
+
+      &.active {
+        color: red;
+        text-decoration: none;
+        cursor: default;
+      }
+    }
+  }
+}
