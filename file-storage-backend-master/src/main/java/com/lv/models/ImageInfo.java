@@ -19,7 +19,7 @@ public class ImageInfo {
     @Column(nullable = false)
     private String imageType;
 
-    @Column(columnDefinition="CLOB NOT NULL")
+    @Column(nullable = false)
     @Lob
     private String base;
 
